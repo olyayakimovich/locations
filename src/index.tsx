@@ -1,18 +1,19 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
+// eslint-disable-next-line
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
 const client = new ApolloClient({
   uri: 'https://flyby-gateway.herokuapp.com/',
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache()
 });
 
 root.render(

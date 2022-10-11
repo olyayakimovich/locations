@@ -1,9 +1,8 @@
+import { FunctionComponent } from 'react';
 import { Locations } from './features/locations/Locations';
 
-function App() {
-  return (
-   <Locations />
-  );
-}
+const App: FunctionComponent = () => {
+  return <Locations />;
+};
 
 export default App;
